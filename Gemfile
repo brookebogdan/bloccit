@@ -5,14 +5,14 @@ source 'https://rubygems.org'
 
  # #1
  group :production do
-   gem 'pg'
+   gem 'pg', '~> 0.20.0'
    gem 'rails_12factor'
  end
 
  # #2
  group :development do
    gem 'sqlite3'
-   gem 'pry-rails' 
+   gem 'pry-rails'
  end
 
  group :development, :test do
