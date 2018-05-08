@@ -24,9 +24,13 @@ class AdvertisementsController < ApplicationController
       flash[:error] = "There was an error. Please try again."
       render :new
 <<<<<<< HEAD
+<<<<<<< HEAD
     end 
 =======
     end
 >>>>>>> 92d9faf8913d2b5c566a656daaddf819cb9f8aa6
+=======
+    end
+>>>>>>> checkpoint-23-assignment
   end
 end
