@@ -23,10 +23,6 @@ class AdvertisementsController < ApplicationController
     else
       flash[:error] = "There was an error. Please try again."
       render :new
-<<<<<<< HEAD
-    end 
-=======
     end
->>>>>>> 92d9faf8913d2b5c566a656daaddf819cb9f8aa6
   end
 end
