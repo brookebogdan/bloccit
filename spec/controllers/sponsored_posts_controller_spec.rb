@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe SponsoredPostsController, type: :controller do
 
 let(:my_topic) { Topic.create!({ name: RandomData.random_sentence, description: RandomData.random_paragraph }) }
-let(:my_sponsored_post) { Sponsored_posts.create!({ title: RandomData.random_sentence, body: RandomData.random_paragraph, price: RandomData.random_integer }) }
+let(:my_sponsored_post) { SponsoredPost.create!({ title: RandomData.random_sentence, body: RandomData.random_paragraph, price: RandomData.random_integer }) }
 
   describe "GET new" do
     it "returns http success" do
