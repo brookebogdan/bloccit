@@ -29,7 +29,7 @@ let(:my_sponsored_post) { SponsoredPost.create!({ title: RandomData.random_sente
      end
 
      it "renders the #show view" do
-       get :show, topic_id: my_topic.id, id: my_post.id
+       get :show, topic_id: my_topic.id, id: my_topic.id
        expect(response).to render_template :show
      end
 
@@ -46,7 +46,7 @@ let(:my_sponsored_post) { SponsoredPost.create!({ title: RandomData.random_sente
     end
 
     it "renders the #edit view" do
-      get :edit, topic_id: my_topic.id, id: my_post.id
+      get :edit, topic_id: my_topic.id, id: my_topic.id
       expect(response).to render_template :edit
     end
   end
