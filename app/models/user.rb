@@ -1,4 +1,8 @@
 class User < ActiveRecord::Base
+<<<<<<< HEAD
+=======
+  has_many :posts
+>>>>>>> checkpoint-34
 
   before_save { self.email = email.downcase if email.present? }
   validates :name, length: { minimum: 1, maximum: 100 }, presence: true

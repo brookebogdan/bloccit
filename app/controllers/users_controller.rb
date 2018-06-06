@@ -3,13 +3,30 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+<<<<<<< HEAD
   def create
 
+=======
+  def confirm
     @user = User.new
     @user.name = params[:user][:name]
     @user.email = params[:user][:email]
     @user.password = params[:user][:password]
     @user.password_confirmation = params[:user][:password_confirmation]
+    @confirmation = params[:user][:confirmation]
+  end
+
+  def create
+>>>>>>> checkpoint-34
+    @user = User.new
+    @user.name = params[:user][:name]
+    @user.email = params[:user][:email]
+    @user.password = params[:user][:password]
+    @user.password_confirmation = params[:user][:password_confirmation]
+<<<<<<< HEAD
+=======
+    @confirmation = params[:user][:confirmation]
+>>>>>>> checkpoint-34
 
     if @user.save
       flash[:notice] = "Welcome to Bloccit #{@user.name}!"

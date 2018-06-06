@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe SponsoredPostsController, type: :controller do
 
 let(:my_topic) { Topic.create!({ name: RandomData.random_sentence, description: RandomData.random_paragraph }) }
-let(:my_sponsored_post) { Sponsored_posts.create!({ title: RandomData.random_sentence, body: RandomData.random_paragraph, price: RandomData.random_integer }) }
+let(:my_sponsored_post) { SponsoredPost.create!({ title: RandomData.random_sentence, body: RandomData.random_paragraph, price: RandomData.random_integer }) }
 
   describe "GET new" do
     it "returns http success" do
@@ -29,7 +29,7 @@ let(:my_sponsored_post) { Sponsored_posts.create!({ title: RandomData.random_sen
      end
 
      it "renders the #show view" do
-       get :show, topic_id: my_topic.id, id: my_post.id
+       get :show, topic_id: my_topic.id, id: my_topic.id
        expect(response).to render_template :show
      end
 
@@ -46,7 +46,7 @@ let(:my_sponsored_post) { Sponsored_posts.create!({ title: RandomData.random_sen
     end
 
     it "renders the #edit view" do
-      get :edit, topic_id: my_topic.id, id: my_post.id
+      get :edit, topic_id: my_topic.id, id: my_topic.id
       expect(response).to render_template :edit
     end
   end
