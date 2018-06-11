@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20180521011115) do
-=======
-ActiveRecord::Schema.define(version: 20180531162312) do
->>>>>>> checkpoint-34
+ActiveRecord::Schema.define(version: 20180611141637) do
 
   create_table "advertisements", force: :cascade do |t|
     t.string   "title"
@@ -71,6 +67,7 @@ ActiveRecord::Schema.define(version: 20180531162312) do
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.integer  "role"
   end
 
 end

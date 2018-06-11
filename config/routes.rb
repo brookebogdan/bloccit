@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   get 'sponsored_posts/edit'
 
-# resources :advertisements
+resources :advertisements
 resources :topics do
   resources :posts, except: [:index]
   resources :sponsored_posts, except: [:index]
