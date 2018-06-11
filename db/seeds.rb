@@ -20,7 +20,6 @@ topics = Topic.all
 
 # Create Posts
 50.times do
-# #1
 Post.create!(
   user:   users.sample,
   topic:  Topic.all.sample,
@@ -33,6 +32,7 @@ posts = Post.all
 # Create Comments
 100.times do
   Comment.create!(
+    user: users.sample,
     post: posts.sample,
     body: RandomData.random_paragraph
   )
